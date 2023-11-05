@@ -1,0 +1,121 @@
+body{
+    margin:0; 
+    padding:0;
+    position:absolute;
+}
+
+header{
+    font-size: 40px;
+    text-align: center;
+    text-transform:uppercase;
+    background-color: whitesmoke;
+    padding: 20px 0;
+    display:flex;
+}
+
+.titulo{
+    flex:1 1 calc(100% - 72px);
+}
+
+.amarillo{
+    color:#D79C39;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.negro{
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    padding:10px 40px;
+    display: inline-flex;
+    width:100%;
+}
+
+a:hover{
+    background-color: #D79C39;
+    color:white;
+}
+
+.menu{
+    text-transform: none;
+    flex:0 0 50px;
+    border: 1px solid #bbb;
+    font-size: 20px;
+    
+}
+
+.m_desp{
+    box-sizing: border-box;
+    width:180px;
+    text-align: left;
+    background-color: whitesmoke;
+    visibility:visible;
+    border:1px solid #bbb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding-top: 100px;
+    height:100%;
+    position:fixed;
+    right:0;
+    top:0;
+    z-index: 1;
+}
+
+.m_text{
+    width:50px;
+    height:50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: fixed;
+    right:20px;
+    box-shadow: 2px 2px 5px #aaa;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.seccion{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 20px;
+    padding-bottom:0;
+    margin: 20px;
+    border-bottom: 1px solid #D79C39;
+}
+
+.texto{
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+footer{
+    background-color: whitesmoke;
+    position: relative;
+    bottom: 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.lista_autores{
+    margin:0;
+    padding:0;
+}
+
+.autor{
+    margin:0;
+    padding:0;
+    list-style-type: none; 
+}
