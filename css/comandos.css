@@ -44,9 +44,7 @@ a:hover{
 .menu{
     text-transform: none;
     flex:0 0 50px;
-    border: 1px solid #bbb;
     font-size: 20px;
-    
 }
 
 .m_desp{
@@ -64,6 +62,7 @@ a:hover{
     right:0;
     top:0;
     z-index: 1;
+    visibility: visible;
 }
 
 .m_text{

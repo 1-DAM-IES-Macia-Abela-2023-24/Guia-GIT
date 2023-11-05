@@ -43,10 +43,12 @@ h1{
     flex-direction: row;
     width: 75%;
     text-align: center;
+    align-items:normal;
 }
 
 .logo_git{
     width:150px;
+    height:75px;  
     background-color: white;
     border-radius: 50%;
     margin-right: 20px;
