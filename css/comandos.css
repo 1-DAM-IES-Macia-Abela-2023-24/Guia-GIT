@@ -1,7 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height:100%;
+}
+
 body{
     margin:0; 
     padding:0;
     position:absolute;
+    height:100%;
 }
 
 header{
@@ -15,17 +24,28 @@ header{
 
 .titulo{
     flex:1 1 calc(100% - 72px);
+    display:inline-flex;
+    column-gap: 10px;
 }
 
 .amarillo{
     color:#D79C39;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    text-align: right;
+    flex: 1 1 50%;
+    justify-content:flex-end;
+    display:inline-flex;
+    align-items: center;
 }
 
 .negro{
     color:black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    flex: 1 1 50%;
+    justify-content: flex-start;
+    display:inline-flex;
+    align-items: center;
 }
 
 .menu_element{
@@ -43,7 +63,7 @@ header{
 
 .menu{
     text-transform: none;
-    flex:0 0 50px;
+    flex:0 0 70px;
     font-size: 20px;
 }
 
@@ -79,25 +99,43 @@ header{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+main{
+    display:flex;
+    flex-direction: column;
+}
+
 .seccion{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-top: 20px;
     padding-bottom:0;
-    margin: 20px;
+    margin: 20px 40px;
     border-bottom: 1px solid #D79C39;
+    flex:1 1 calc(100% - 80px);
 }
 
 .texto{
     padding: 0 20px 20px 20px;
-    margin-top: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
     hyphens: auto;
+    margin:0 20px;
+    text-wrap: wrap;
+    flex: 1 0 calc(70% - 80px);
 }
 
 .text_img{
     display: flex;
-    margin-right:20px;
+    flex-wrap: wrap;
+}
+
+.img{
+    width:100%;
+    
+}
+
+.img_container{
+    flex: 1 0 30%;
+    margin-right:40px;
 }
 
 label{
@@ -108,7 +146,7 @@ label{
 }
 
 .biblio{
-    margin-left:20px;
+    margin-left:40px;
 }
 
 footer{
