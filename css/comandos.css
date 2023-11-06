@@ -153,7 +153,7 @@ footer{
     background-color: whitesmoke;
     position: relative;
     bottom: 0;
-    width: calc(100% - 40px);
+    width: 100%;
     padding: 20px;
     display: flex;
     gap: 10px;
