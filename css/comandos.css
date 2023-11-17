@@ -134,7 +134,7 @@ main{
 }
 
 .img_container{
-    flex: 1 0 30%;
+    flex: 0 0 200px;
     margin-right:40px;
 }
 
