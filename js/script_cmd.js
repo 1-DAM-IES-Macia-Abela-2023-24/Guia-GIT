@@ -1,6 +1,7 @@
 const menu_btn = document.querySelector('.m_text');
 const menu = document.querySelector('.m_desp');
 const options = document.querySelectorAll('.menu_element');
+const images = document.querySelectorAll('.img');
 
 
 function cerrar_menu(){
@@ -20,7 +21,12 @@ function desplegar_menu(){
     }
 }
 
+function ampliar_img(img){
+    console.log('ampliar imagen',img.style.display)
+}
+
 menu_btn.addEventListener('click',desplegar_menu);
 
 options.forEach((element)=>element.addEventListener('click',cerrar_menu));
 
+images.forEach((element)=>element.addEventListener('click',ampliar_img(element)));
