@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>command template</title>
+    <link rel="stylesheet" href="css/comandos.css">
+    <script src="js/script_cmd.js" defer></script>
+    
+
+
+</head>
+<body>
+    <header id="encabezado">
+        <div class="titulo"><span class="amarillo">git</span> <span class="negro">Branch</span></div> 
+        <nav class="menu">
+            <div class="m_text">M</div>
+            <div class="m_desp">
+                <a class="menu_element" href="index.html">Página Principal</a>
+                <a class="menu_element" href="#encabezado">Inicio</a>
+                <a class="menu_element" href="#s1">Sección 1 <br>
+                    ¿Qué es una Git Branch?</a>
+                <a class="menu_element" href="#s2">Sección 2 <br>
+                    Cómo usar el comando Git Branch</a>
+                <a class="menu_element" href="#s3">Bibliografía</a>
+                <a class="menu_element" href="#s4">Sección 3 <br>
+                    Conclusión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <h3 class="seccion" id="s1">SECCIÓN 1 ¿Qué es una Git Branch?</h3>
+        <p class="texto">El uso de las ramas de desarrollo de Git es una excelente manera de trabajar con una aplicación mientras rastreas sus versiones. En general, una rama de desarrollo (“Git Branch”) es una bifurcación del estado del código que crea un nuevo camino para la evolución del mismo. Puede ir en paralelo a otras Git Branch que se pueden generar. Como podrás ver, hace posible incorporar nuevas funcionalidades al código de manera ordenada y precisa. <br>
+
+            <br>Usar las rams de desarrollo de Git tiene múltiples ventajas. Sin embargo, queremos enfatizar las siguientes: <br><br>
+            
+            
+                &nbsp;-Hace posible desarrollar nuevas funciones para una aplicación sin obstaculizar el desarrollo de la rama principal.<br><br>
+                &nbsp;-Con Git Branch es posible crear diferentes ramas de desarrollo que pueden converger en el mismo repositorio. Por ejemplo, una rama estable, una rama de prueba y una rama inestable.<br><br>
+            
+            Por supuesto, cada desarrollador podrá establecer sus propios métodos con sus propias ventajas utilizando su experiencia como guía.</p>
+        <h3 class="seccion" id="s2">SECCIÓN 2 Cómo usar el comando Git Branch</h3>
+        <div class="text_img">
+            <p class="texto">
+
+                Los usos de las ramas de Git son inicialmente simples, como notarás en el uso de los comandos de Git Branch. Pero como con la mayoría de las cosas, cuantas más ramas tengas, más difícil será administrarlas.<br>
+                
+                En cualquier proyecto Git pudes ver todas las ramas ingresando el siguiente comando en la línea de comando:<br>
+                
+                git branch<br>
+                Si no has creado una rama antes, no verás ningún resultado en el terminal. Crear una rama es realmente simple:<br>
+                
+                git branch [nueva_rama]<br>
+                Luego, tienes que pasar a la rama de desarrollo recién creada. Para hacer esto, ejecuta el siguiente comando:<br>
+                
+                git checkout [nueva_rama]<br>
+                La salida te informará que cambiaste a una nueva rama. Para el ejemplo, digamos que llamamos a esta rama “prueba”, entonces será:<br>
+                
+                Switched to branch ‘prueba’<br>
+                Ahora, en esa nueva rama de desarrollo, puedes crear tantas modificaciones de código como quieras, sin tener que cambiar nada en la principal. Como puedes ver, el programa se mantendrá organizado para nuevas inclusiones de código.<br>
+                
+                Si ejecutas el comando para volver a listar las ramas, verás que se agrega una nueva rama y que estás en ella.
+                
+                git branch<br>
+                Hay algo que debes tener en cuenta si quieres crear una nueva rama de desarrollo. Primero, debes comprometerla con la rama principal para que Git entienda cuál es la rama maestra. Si no haces esto, obtendrás un error. Primero, crea el enlace y luego crea las ramas de desarrollo.<br>
+                
+                Si quieres eliminar una rama de Git, puedes hacerlo con el siguiente comando:
+                
+                git branch -d [nombre_de_ rama]<br>
+                Sin embargo, para hacer esto, no debes estar en la rama que quieres eliminar. Entonces, en este caso, te mueves a la rama maestra y desde allí eliminas la rama que acabas de crear:<br>
+                
+                git checkout master<br>
+                git branch -d test<br>
+                Finalmente, llega un punto en el que has realizado muchas modificaciones en una rama de desarrollo. Y se vuelve estable, por lo que quieres vincularla a otra rama de desarrollo. Para eso, existe el comando merge (fusión).<br>
+                
+                Primero, ubica la rama de desarrollo a la que se adjuntará la segunda rama. Por ejemplo, adjuntaremos la rama de prueba a la rama maestra. Luego, debemos ubicarnos en la rama maestra y fusionar usando el comando:<br>
+                
+                git merge [rama]<br>
+                Como puedes ver, las funciones básicas Git Branch son bastante sencillas. Solo necesitas conocer los fundamentos e intentar mantener limpia tu administración.<br></p>
+
+                <h3 class="seccion" id="s2">SECCIÓN 2 Conclusión</h3>
+        <div class="text_img">
+            <p class="texto">Saber cómo usar las ramas de desarrollo se vuelve vital para desarrollar una aplicación de manera ordenada. Esto te permite organizar tu código con diferentes ramas de Git.<br>
+
+                En este artículo, te enseñamos los conceptos básicos sobre cómo trabajar con ellas.<br>
+                
+                Como siempre, es recomendable leer la <a href="https://git-scm.com/docs/git-branch"> guia oficial de Git</a> para comprender cómo se realizan las operaciones complejas con Git Branch.<br>
+
+            <div class="img_container">
+                    <div class="img_label">
+                        <img class="img" id="img1" src="images/comando_ejemplo.png" alt="Imágen no disponible">
+                        <label for="img1">Imagen 1. Ejemplo de comando</label>
+                    </div>
+            </div>
+        </div>
+
+        <h3 class="seccion" id="s3">BIBLIOGRAFÍA</h3>
+
+            <ul class="texto biblio">
+                <li><a href="https://www.hostinger.es/tutoriales/como-usar-git-branch#%C2%BFQue_es_una_Git_Branch">https://www.hostinger.es/</a></li>
+                
+            </ul>
+
+    </main>
+
+    <footer>
+        <span>Autores</span>
+        <div >
+            <ul class="lista_autores">
+                <li class="autor">Cristian Redondo</li>
+            </ul> 
+        </div>
+    </footer>
+</body>
+</html>
