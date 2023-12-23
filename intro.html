@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia GIT</title>
+	<link rel="stylesheet" href="css/comandos.css">
+    <script src="js/script_cmd.js" defer></script>
+</head>
+<body>
+	<header id="encabezado">
+        <div class="titulo"><span class="amarillo">Introducción a </span> <span class="negro">GIT</span></div> 
+        <nav class="menu">
+            <div class="m_text">M</div>
+            <div class="m_desp">
+                <a class="menu_element" href="index.html">Página Principal</a>
+                <a class="menu_element" href="#encabezado">Introducción a GIT</a>
+                <a class="menu_element sub_element" href="#s1">¿Qué es GIT?</a>
+                <a class="menu_element sub_element" href="#s2">¿Cómo funciona GIT?</a>
+                <a class="menu_element sub_element" href="#s3">Estados de los archivos en GIT</a>
+				<a class="menu_element sub_element" href="#s4">Bibliografía</a>
+            </div>
+        </nav>
+    </header>
+	
+	<main>
+	<ol>
+		<h3 id="s1"><li>¿Qué es GIT?</li></h3>
+		
+			<p>GIT es un sistema de control de versiones desarrollado (VCS del inglés Version Control System) por Linus Torvalds. Se creo inicialmente para el desarrollo de forma colaborativa de proyectos de gran envergadura como el core de Linux.</p>
+			
+			<p>La idea de Linus era disponer de un sistema de control de versiones distribuido para que en caso de pérdida del repositorio, digamos central, se pudiera recuperar fácilmente a partir de las copias del resto de repositorios.</p>
+		
+		
+		<h3 id="s2"><li>¿Cómo funciona GIT?</li></h3>
+		
+			<p>Para ello, Linus desarrollo un VCS distribuido no incremental. Con esto último, queremos decir que en el repositorio no se guardan archivos con el incremental respecto a la versión anterior, sino que se guardan copias completas del archivo y si no ha sido modificado, se apunta hacia la última versión en la que el archivo fue modificado, como puede verse en la imagen siguiente:</p>
+			
+			<img src="images/snapshots.png" alt="Imagen no disponible"/>
+			
+			<p>Por dentro, GIT dispone de 3 áreas diferenciadas de trabajo:</p>
+			
+			<ul>
+				<li>Directorio de trabajo</li>
+				<p>Carpeta del sistema donde dejo los archivos del código fuente</p>
+				<li>Staging</li>
+				<p>Zona interna de GIT donde prepara los cambios para ser almacenados en el repositorio. Se le suele llamar índice pues es donde se almacenan todos los cambios hasta el próximo comit. Se puede dejar la modificación de varios ficheros en staging hasta haber completado la funcionalidad en desarrollo.</p>
+				<li>Repositorio (.git)</li>
+				<p>Es donde mantenemos el histórico de versiones de nuestro producto para así poder recuperar fácilmente una versión determinada en caso de hacernos falta.</p>
+			</ul>
+			
+			<p>En la siguiente imagen mostramos gráficamente dichas áreas y cómo podemos movernos de unas a otras:</p>
+			
+			<img src="images/areas.png" alt="Imagen no disponible"/>
+			
+			<p>Git además, puede mostrar el estado de los ficheros tanto en el área del directorio de trabajo, como en el área de staging.</p>
+		
+		<h3 id="s3"><li>Estados de los archivos en GIT</li></h3>
+				
+			<p>Para saber como tenemos nuestro repositorio, en GIT se guarda el estado en el que se encuentran cada uno de nuestros archivos tanto en el área del directorio de trabajo como en el área de Staging. Principalmente tenemos 4 estados:</p>
+			
+			<ul>
+				<li>Untracked</li>
+				<p>Los archivos marcados como Untracked son archivos que no se encuentran en monitoriozación en el repositorio. Es decir, no están incluidos en el repositorio. En la versión reducida del comando de estado (git status) aparecerán con un signo de interrogación en rojo (<span style="color:red; font-weight:900">?</span>)</p>
+				<li>Unmodified</li>
+				<p>En este estado tendremos los archivos que son idénticos a lo que GIT tiene almacenado en su repositorio y por tanto no hay que hacer nada con ellos. De echo, si lanzamos un comando de estado (git status) estos ficheros no aparecerán a pesar de tenerlos en el directorio de trabajo.</p>
+				<li>Modified</li>
+				<p>En este estado veremos aquellos archivos que han sufrido una modificación en el directorio de trabajo respecto a aquellos que tiene GIT guardados en el repositorio. Se marcarán con una <span style="color:red; font-weight:900">M</span> tras ejecutar un comando de estado abreviado y aparecerá en la columna de la derecha.</p>
+				<li>Staged</li>
+				<p>En staged estarán los archivos que están preparados para ser almacenados en el repositorio, por tanto, son archivos con diferencias entre el directorio de trabajo/staging y el repositorio. Se marcarán con una <span style="color:green; font-weight:900">M</span> tras ejecutar un comando de estado abreviado y aparecerá en la columna de la izquierda.</p>
+			</ul>
+			
+			<p>Gráficamente vemos estos estados en la siguiente imagen, así como cómo podemos cambiar de estado un fichero determinado.</p>
+			<img src="images/lifecycle.png" alt="Imagen no disponible"/>
+			
+			<h3 id="s3"><li>Bibliografía</li></h3>
+			
+			<ul class="texto biblio">
+                <li><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+            </ul>
+		
+	</ol>
+	</main>
+	<footer>
+        <span>Autores</span>
+        <div >
+            <ul class="lista_autores">
+                <li class="autor">Andrés López Recas - Profesor Entornos de Desarrollo IES Macià Abela</li>
+            </ul> 
+        </div>
+    </footer>
+	
+</body>
+</html>
